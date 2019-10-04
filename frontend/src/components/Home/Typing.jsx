@@ -6,9 +6,9 @@ export default class Typing extends Component {
     const { strings } = this.props
     const options = {
       strings: strings,
-      typeSpeed: 120,
-      backSpeed: 130,
-      backDelay: 3500
+      typeSpeed: 100,
+      backSpeed: 110,
+      backDelay: 2000
     }
     this.typed = new Typed(this.el, options)
   }

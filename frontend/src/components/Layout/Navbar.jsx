@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <StyledNav>
       <Link to='/'>{name}</Link>
-      <ButtonLink to='/home' title='Log In' />
+      <ButtonLink to='/login'>Log in</ButtonLink>
     </StyledNav>
   )
 }

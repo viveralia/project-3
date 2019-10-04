@@ -5,13 +5,13 @@ import Container from '../components/Grid/Container'
 import Grid from '../components/Grid/Grid'
 import ButtonLink from '../components/Buttons/ButtonLink'
 import styled from 'styled-components'
+import SEO from '../components/SEO/SiteSeo'
 
 /*************************/
 /********* CSS ***********/
 /*************************/
 const StyledNotFound = styled.div`
   text-align: center;
-  padding: 2rem 0;
   section {
     div {
       div:first-child {
@@ -26,20 +26,22 @@ const StyledNotFound = styled.div`
     color: var(--black);
   }
   p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   @media (min-width: 992px) {
-    padding: 0;
     section {
       div {
         div:first-child {
-          padding: 4rem;
+          padding: 0 0.75rem;
         }
       }
     }
     h1 {
       font-size: 4.5rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
     }
   }
 `
@@ -50,8 +52,9 @@ const StyledNotFound = styled.div`
 const NotFound = () => {
   return (
     <Layout>
+      <SEO title='Not Found' />
       <StyledNotFound>
-        <Container>
+        <Container type='fullheight'>
           <Grid sm={1} md={2} spacing='3.5rem'>
             <div>
               <img src={errorImg} alt='Not found' />
@@ -59,7 +62,9 @@ const NotFound = () => {
             <div>
               <h1>Oops!</h1>
               <p>The page you were looking for doesn't exist</p>
-              <ButtonLink to='/' title='Go home' type='primary' />
+              <ButtonLink to='/' modifier='primary'>
+                Go home
+              </ButtonLink>
             </div>
           </Grid>
         </Container>

@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 /*************************/
 /********* CSS ***********/
 /*************************/
-const ButtonLink = styled(Link)`
+const Button = styled.button`
   background: ${props => (props.modifier === 'primary' ? 'var(--black)' : 'transparent')};
   color: ${props => (props.modifier === 'primary' ? '#fff' : 'var(--black)')};
   padding: 0.5rem 1.571rem;
@@ -15,6 +14,7 @@ const ButtonLink = styled(Link)`
   transition: all 0.175s ease;
   display: inline-block;
   position: relative;
+  cursor: pointer;
   ::after {
     content: '';
     position: absolute;
@@ -40,4 +40,4 @@ const ButtonLink = styled(Link)`
   }
 `
 
-export default ButtonLink
+export default Button

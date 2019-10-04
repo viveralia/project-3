@@ -54,7 +54,9 @@ const Hero = () => {
               <br /> with the world
             </h1>
             <p>The easiest and fastest way to get a webpage. No credit card required.</p>
-            <ButtonLink to='/start' title='Get your page' type='primary' />
+            <ButtonLink to='/signup/email' modifier='primary'>
+              Get your page
+            </ButtonLink>
           </div>
           <div>
             <img src={portfolioImg} alt='Portfolio' />
